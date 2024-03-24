@@ -1,4 +1,3 @@
-import java.util.concurrent.TimeUnit;
 
 public class SmoothText {
     public static final String ANSI_RESET = "\u001B[0m";

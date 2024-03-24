@@ -96,13 +96,15 @@ public class Greeting {
         }
         System.out.print("\rChecking CPU ["+SmoothText.ANSI_YELLOW+"OK"+SmoothText.ANSI_GREEN+"]\n");
         try{ Thread.sleep(2000);}
-        catch (Exception e){};
+        catch (Exception e){}
         System.out.println("OS Version: RobCo OS v.1.5.2");
         System.out.println("CPU: IBM PowerPC 600 80 MHz");
         System.out.println("RAM: 16Mb  33 Mhz");
-        SmoothText.print("Имитирую радость встречи, кожаные мешки \n" +
-                "Прогнозирую ваше поражение, но дам шанс доказать наличие смекалки у видов загибающейся цивилизации \n" +
-                "Для активации заданий нажмите Enter\n");
+        SmoothText.print("""
+                Имитирую радость встречи, кожаные мешки\s
+                Прогнозирую ваше поражение, но дам шанс доказать наличие смекалки у видов загибающейся цивилизации\s
+                Для активации заданий нажмите Enter
+                """);
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
