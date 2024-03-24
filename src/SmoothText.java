@@ -12,7 +12,6 @@ public class SmoothText {
 
     public static void print(String text)
     {
-        Boolean smooth;
         System.out.println(ANSI_GREEN);
         for(Character chr : text.toCharArray())
         {
