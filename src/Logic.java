@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Logic {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static  Boolean first (Boolean repeat)
+    public static  void first (Boolean repeat)
     {
         Boolean isRight = false;
         String result = "";
@@ -33,7 +33,12 @@ public class Logic {
          Logic.first(true);
  }
         SmoothText.print(result);
-        return isRight;
+        if(!isRight) SmoothText.print("""
+                Смотрю,ты расстроился, это меня радует
+                Но к моему сожалению, у тебя есть еще шанс реабилитироваться
+                Так что даю тебе время сбросить эмоциональное напряжение путем слезопускания в ближайшую жилетку и приступить к следующему заданию
+                """);
+        else SmoothText.print("\nВремя для второго задания\n");
     }
 
 
