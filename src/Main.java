@@ -5,5 +5,6 @@ public class Main {
         Logic.first(false);
         Logic.second();
         Logic.third();
+        //Persons.DIRECTOR_ONE.show();
     }
 }
