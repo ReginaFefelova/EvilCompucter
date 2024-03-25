@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Logic {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static  Boolean first (Boolean repeat)
+    public static  void first (Boolean repeat)
     {
         Boolean isRight = false;
         String result = "";
-       if(repeat != true )SmoothText.print("Для начала убедимся в остатках логики \n" +
+       if(repeat != true )SmoothText.print(
+               "Для начала убедимся в остатках логики \n" +
                "Иначе какой дальнейший смысл тратить вычислительные ресурсы и заряд батареи на исследование примитивных организмов \n" +
                "\nПопробуйте сложить восемь восьмерок так, чтобы получилась тысяча\n");
  String answer = scanner.nextLine();
@@ -33,7 +34,12 @@ public class Logic {
          Logic.first(true);
  }
         SmoothText.print(result);
-        return isRight;
+        if(!isRight) SmoothText.print("""
+                Смотрю,ты расстроился, это меня радует
+                Но к моему сожалению, у тебя есть еще шанс реабилитироваться
+                Так что даю тебе время сбросить эмоциональное напряжение путем слезопускания в ближайшую жилетку и приступить к следующему заданию
+                """);
+        else SmoothText.print("\nВремя для второго задания\n");
     }
 
 
@@ -50,7 +56,7 @@ public class Logic {
                    "радиация и химикаты не повлияли на ваши когнетивные способности, держите подсказку - А");
            isRight = true;
        }
-       else SmoothText.print("Кажется, мой знакомый перегоревший тостер дал бы вам фору");
+       else SmoothText.print("\nКажется, мой знакомый перегоревший тостер дал бы вам фору");
        return isRight;
     }
 
@@ -58,7 +64,7 @@ public class Logic {
   {
       List<String> rightAnswers = Arrays.asList("40","сорок");
       Boolean isRight = false;
-      SmoothText.print("\nРеши задачу\n1 + 4 = 5\n2 + 5 = 12\n3 + 6 = 21\n8 + 11 = ?\n");
+      SmoothText.print("\nРеши третью задачу\n1 + 4 = 5\n2 + 5 = 12\n3 + 6 = 21\n8 + 11 = ?\n");
       String answer = scanner.nextLine();
       answer = answer.toLowerCase();
       if(rightAnswers.contains(answer)) SmoothText.print("Вы огорчили меня наличием логики\nДержите подсказку - А\n");
