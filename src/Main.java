@@ -6,6 +6,7 @@ public class Main {
         Logic.second();
         Logic.third();
 //        //Persons.DIRECTOR_ONE.show();
+
         famousPerson.ask();
     }
 }
