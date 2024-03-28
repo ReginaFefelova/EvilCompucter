@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Logic {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static  Boolean first (Boolean repeat)
+    public static  void first (Boolean repeat)
     {
         Boolean isRight = false;
         String result = "";
-       if(repeat != true )SmoothText.print("Для начала убедимся в остатках логики \n" +
+       if(repeat != true )SmoothText.print(
+               "Для начала убедимся в остатках логики \n" +
                "Иначе какой дальнейший смысл тратить вычислительные ресурсы и заряд батареи на исследование примитивных организмов \n" +
                "\nПопробуйте сложить восемь восьмерок так, чтобы получилась тысяча\n");
  String answer = scanner.nextLine();
@@ -22,18 +23,22 @@ public class Logic {
      }
 
      if (sum == 1000) {
-         result = "\nТы ответил правильно, биологическая форма жизни \nПолучи подсказку - A\n";
+         result = "\nВы ответили правильно, биологические формы жизни \nПолучите подсказку - A\n";
          isRight = true;
-     }
-     else result = "\nТы ошибся, мешок с костями";
+     } else result = "\nВы ошиблись, мешоки с костями";
  }
  catch (Exception e)
  {
-         SmoothText.print("\nЭй, кожаный, у нас тут не уравнения, используй только цифры!\n");
+     SmoothText.print("\nЭй, кожаные, у нас тут не уравнения, используйте только цифры!\n");
          Logic.first(true);
  }
         SmoothText.print(result);
-        return isRight;
+        if(!isRight) SmoothText.print("""
+                Смотрю,вы расстроились, это меня радует
+                Но к моему сожалению, у вас еще есть шанс реабилитироваться
+                Так что даю время сбросить эмоциональное напряжение путем слезопускания в ближайшую жилетку и приступить к следующему заданию
+                """);
+        else SmoothText.print("\nВремя для второго задания\n");
     }
 
 
@@ -47,10 +52,10 @@ public class Logic {
        answer = answer.toLowerCase();
        if(rightAnswers.contains(answer)) {
            SmoothText.print("К сожалению моему и вашей примитивной радости, " +
-                   "радиация и химикаты не повлияли на ваши когнетивные способности, держите подсказку - А");
+                   "радиация и химикаты не повлияли на ваши когнитивные способности, держите подсказку - А");
            isRight = true;
        }
-       else SmoothText.print("Кажется, мой знакомый перегоревший тостер дал бы вам фору");
+       else SmoothText.print("\nКажется, мой знакомый перегоревший тостер дал бы вам фору");
        return isRight;
     }
 
@@ -58,7 +63,7 @@ public class Logic {
   {
       List<String> rightAnswers = Arrays.asList("40","сорок");
       Boolean isRight = false;
-      SmoothText.print("\nРеши задачу\n1 + 4 = 5\n2 + 5 = 12\n3 + 6 = 21\n8 + 11 = ?\n");
+      SmoothText.print("\nРешите третью задачу\n1 + 4 = 5\n2 + 5 = 12\n3 + 6 = 21\n8 + 11 = ?\n");
       String answer = scanner.nextLine();
       answer = answer.toLowerCase();
       if(rightAnswers.contains(answer)) SmoothText.print("Вы огорчили меня наличием логики\nДержите подсказку - А\n");
