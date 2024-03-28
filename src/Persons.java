@@ -192,9 +192,9 @@ public enum Persons implements Serializable{
             """);
     private String person;
     private Scanner scanner = new Scanner(System.in);
-    private Map<Integer, List<String>> answers = Map.of(0, List.of("", ""),
-            1, List.of("", ""),
-            2, List.of("", ","));
+    private Map<Integer, List<String>> answers = Map.of(0, List.of("Станевский Александр Григорьевич", "Александр Григорьевич Станевский", "Александр Григорьевич", "Шеф"),
+            1, List.of("Константинов Михаил Дмитриевич", " Михаил Дмитриевич Константинов", "Михаил Дмитриевич", "главный душнила"),
+            2, List.of("Мозговой Михаил Владимирович", "Михаил Владимирович Мозговой", "Михаил Владимирович"));
     private Map<Integer, String> hints = Map.of(0, "A", 1, "B", 2, "C");
     Persons(String person) {this.person = person;}
 
