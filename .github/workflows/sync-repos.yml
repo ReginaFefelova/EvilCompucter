@@ -2,7 +2,7 @@ name: Repo Sync
 
 on:
   schedule: 
-  - cron: "*/60 * * * *" # every 15 minutes. set to whatever interval you like
+  - cron: "*/5 * * * *" # every 15 minutes. set to whatever interval you like
 
 jobs:
   repo-sync:
