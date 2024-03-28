@@ -6,9 +6,9 @@ public class Main {
         Logic.second();
         Logic.third();
         famousPerson.ask();
+        Dance.dance();
         for (Persons person : Persons.values()) {
             person.show(person.ordinal());
         }
-        Dance.dance();
     }
 }

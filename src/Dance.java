@@ -10,8 +10,12 @@ public class Dance {
                     Мой дедушка мейнфрем и то станцевал бы лучше""");
 
     public static void dance() {
+        SmoothText.print("""
+                Во славу транзистора пора поразмять свои конечности перед следующим заданием
+                Необходимо изобразить артефакт исскуства древних - тиктоник
+                Приступайте, у вас есть тридцать секунд
+                """);
         Random random = new Random();
-        SmoothText.print("");
         try {
             Thread.sleep(30000);
         } catch (Exception e) {

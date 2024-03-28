@@ -17,7 +17,7 @@ public class SmoothText {
         {
             System.out.print(chr);
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             }
             catch (Exception e)
             {}
