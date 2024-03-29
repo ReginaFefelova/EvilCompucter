@@ -10,18 +10,25 @@ public class SmoothText {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public static void print(String text)
+    public static void print(String text, Integer speed)
     {
-        System.out.println(ANSI_GREEN);
+        System.out.print(ANSI_GREEN);
         for(Character chr : text.toCharArray())
         {
             System.out.print(chr);
             try {
-                Thread.sleep(1);
+                Thread.sleep(speed);
             }
             catch (Exception e)
             {}
         }
 
     }
+
+    public static void print(String text) {
+        print(text, 100);
+
+    }
+
+
 }

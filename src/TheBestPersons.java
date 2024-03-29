@@ -3,10 +3,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public enum Persons implements Serializable{
+public enum TheBestPersons implements Serializable {
 
     DIRECTOR_ONE("""
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            \n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&%%####%%#%#####%&&&&@&&&&%&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -192,15 +192,18 @@ public enum Persons implements Serializable{
             """);
     private String person;
     private Scanner scanner = new Scanner(System.in);
-    private Map<Integer, List<String>> answers = Map.of(0, List.of("Станевский Александр Григорьевич", "Александр Григорьевич Станевский", "Александр Григорьевич", "Шеф"),
+    private Map<Integer, List<String>> answers = Map.of(0, List.of("Станевский Александр Григорьевич", "Александр Григорьевич Станевский", "Александр Григорьевич", "Шеф", "Шэф"),
             1, List.of("Константинов Михаил Дмитриевич", " Михаил Дмитриевич Константинов", "Михаил Дмитриевич", "Главный душнила"),
-            2, List.of("Мозговой Михаил Владимирович", "Михаил Владимирович Мозговой", "Михаил Владимирович"));
-    private Map<Integer, String> hints = Map.of(0, "A", 1, "B", 2, "C");
-    Persons(String person) {this.person = person;}
+            2, List.of("Мозговой Михаил Владимирович", "Михаил Владимирович Мозговой", "Михаил Владимирович", "Киану Ривз"));
+    private Map<Integer, String> hints = Map.of(0, "это \u001B[33m***\u001B[32m , братан!\n", 1, " но вас все равно ждет \u001B[33mГРАНДИОЗНЫЙ ПРОВАЛ\u001B[32m\n", 2, "я потерпел неудачу, но существует большая разница между неудачей и \u001B[33m***\u001B[32m .\nНеудача может постичь любого дурака.\nНо \u001B[33m***\u001B[32m ... \u001B[33m***\u001B[32m - это катастрофа необычайных размеров.");
+
+    TheBestPersons(String person) {
+        this.person = person;
+    }
 
     public void show(Integer i)
     {
-        System.out.println(person);
+        SmoothText.print(person, 1);
         SmoothText.print("\nКто это? Напишите полностью ФИО\n");
         String answer = scanner.nextLine();
         if (answers.get(i).contains(answer))
