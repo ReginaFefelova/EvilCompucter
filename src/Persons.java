@@ -193,7 +193,7 @@ public enum Persons implements Serializable{
     private String person;
     private Scanner scanner = new Scanner(System.in);
     private Map<Integer, List<String>> answers = Map.of(0, List.of("Станевский Александр Григорьевич", "Александр Григорьевич Станевский", "Александр Григорьевич", "Шеф"),
-            1, List.of("Константинов Михаил Дмитриевич", " Михаил Дмитриевич Константинов", "Михаил Дмитриевич", "главный душнила"),
+            1, List.of("Константинов Михаил Дмитриевич", " Михаил Дмитриевич Константинов", "Михаил Дмитриевич", "Главный душнила"),
             2, List.of("Мозговой Михаил Владимирович", "Михаил Владимирович Мозговой", "Михаил Владимирович"));
     private Map<Integer, String> hints = Map.of(0, "A", 1, "B", 2, "C");
     Persons(String person) {this.person = person;}
@@ -201,7 +201,7 @@ public enum Persons implements Serializable{
     public void show(Integer i)
     {
         System.out.println(person);
-        SmoothText.print("Кто это\n");
+        SmoothText.print("\nКто это? Напишите полностью ФИО\n");
         String answer = scanner.nextLine();
         if (answers.get(i).contains(answer))
             SmoothText.print("Так уж и быть, держите подсказку - " + hints.get(i) + "\n");
