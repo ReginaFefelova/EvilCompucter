@@ -7,6 +7,7 @@ public class Main {
         //Logic.third();
         //famousPerson.ask();
         Dance.dance();
+        SmoothText.print("\nНасколько хорошо вы знаете известных людей и вигаетесь , я понял.\nНо насколько знакомы с самыми известными лицами?\nНазовите ФИО следующих личностей ГУИМЦ");
         for (Persons person : Persons.values()) {
             person.show(person.ordinal());
         }

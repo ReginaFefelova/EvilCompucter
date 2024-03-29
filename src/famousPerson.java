@@ -33,10 +33,8 @@ public class famousPerson implements Serializable {
             for (Map.Entry<String, List> intEntry : entry.getValue().entrySet()) {
                 SmoothText.print(intEntry.getKey());
                 answer = scanner.nextLine();
-                System.out.println(intEntry.getValue().contains(answer));
                 if (intEntry.getValue().contains(answer)) {
                     SmoothText.print(correct.get(entry.getKey()) + hints.get(entry.getKey()));
-
                 } else {
                     SmoothText.print(jokes.get(entry.getKey()));
 
